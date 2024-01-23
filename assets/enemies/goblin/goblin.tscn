@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://cb80w1c10h045"]
+
+[ext_resource type="Texture2D" uid="uid://dekf6uqdsw0bx" path="res://assets/entity-sprites.png" id="1_34s2m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78t3s"]
+atlas = ExtResource("1_34s2m")
+region = Rect2(144, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d7vs2"]
+atlas = ExtResource("1_34s2m")
+region = Rect2(160, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pooha"]
+atlas = ExtResource("1_34s2m")
+region = Rect2(176, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lckok"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_78t3s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d7vs2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_78t3s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pooha")
+}],
+"loop": true,
+"name": &"walk_down",
+"speed": 5.0
+}]
+
+[node name="Goblin" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_lckok")
+animation = &"walk_down"
+frame_progress = 0.865592

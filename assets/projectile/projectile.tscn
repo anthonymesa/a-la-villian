@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://31lh66i0x6mr"]
+
+[ext_resource type="Texture2D" uid="uid://cq74rliupuxdv" path="res://assets/projectile/dot.svg" id="1_gqn3y"]
+
+[node name="Projectile" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_gqn3y")

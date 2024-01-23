@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://c562e3yr3184y"]
+
+[ext_resource type="PackedScene" uid="uid://cbomwuovvulch" path="res://assets/player/player.tscn" id="1_3uamm"]
+[ext_resource type="PackedScene" uid="uid://b3x3054o13x0q" path="res://assets/glyph/glyph.tscn" id="2_j4ees"]
+[ext_resource type="PackedScene" uid="uid://cjg088yrjb838" path="res://assets/enemies/slime/slime.tscn" id="3_42mqk"]
+[ext_resource type="PackedScene" uid="uid://cb80w1c10h045" path="res://assets/enemies/goblin/goblin.tscn" id="4_quml1"]
+[ext_resource type="PackedScene" uid="uid://dqepj6do5t57c" path="res://assets/enemies/golemn/golemn.tscn" id="5_nee7h"]
+[ext_resource type="PackedScene" uid="uid://da00o7nnej47v" path="res://assets/ui/ui.tscn" id="6_c6mqf"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_3uamm")]
+position = Vector2(28, 38)
+
+[node name="Glyph" parent="." instance=ExtResource("2_j4ees")]
+position = Vector2(43, 40)
+
+[node name="Slime" parent="." instance=ExtResource("3_42mqk")]
+position = Vector2(59, 31)
+
+[node name="Goblin" parent="." instance=ExtResource("4_quml1")]
+position = Vector2(74, 58)
+
+[node name="Golemn" parent="." instance=ExtResource("5_nee7h")]
+position = Vector2(95, 31)
+
+[node name="UI" parent="." instance=ExtResource("6_c6mqf")]
+
+[node name="Virtual joystick left" parent="UI" index="0"]
+anchors_preset = -1
+anchor_left = 0.166667
+anchor_top = 0.46875
+anchor_right = 0.347042
+anchor_bottom = 0.80625
+offset_right = 129.87
+offset_bottom = 162.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Virtual joystick right" parent="UI" index="1"]
+anchors_preset = -1
+anchor_left = 0.683333
+anchor_top = 0.4125
+anchor_right = 0.995833
+anchor_bottom = 0.88125
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 225.0
+offset_bottom = 225.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[editable path="UI"]

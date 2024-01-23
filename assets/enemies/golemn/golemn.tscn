@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://dqepj6do5t57c"]
+
+[ext_resource type="Texture2D" uid="uid://dekf6uqdsw0bx" path="res://assets/entity-sprites.png" id="1_4okbm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjfp3"]
+atlas = ExtResource("1_4okbm")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rxd28"]
+atlas = ExtResource("1_4okbm")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1x8kb"]
+atlas = ExtResource("1_4okbm")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cfepb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjfp3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rxd28")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjfp3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1x8kb")
+}],
+"loop": true,
+"name": &"walk_down",
+"speed": 5.0
+}]
+
+[node name="Golemn" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_cfepb")
+animation = &"walk_down"
+frame_progress = 0.450601

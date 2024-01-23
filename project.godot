@@ -1,0 +1,33 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="A La Villian"
+run/main_scene="res://scenes/main.tscn"
+config/features=PackedStringArray("4.1", "Mobile")
+config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=240
+window/size/viewport_height=160
+window/size/mode=1
+window/size/initial_position_type=0
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/BurstParticles2D/plugin.cfg", "res://addons/projectiles_plugin/plugin.cfg")
+
+[rendering]
+
+renderer/rendering_method="mobile"

@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=3 uid="uid://b3x3054o13x0q"]
+
+[ext_resource type="Texture2D" uid="uid://tvo04lmh0k2a" path="res://assets/glyph/glyphs-colouring-example.png" id="1_ucm60"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7thye"]
+atlas = ExtResource("1_ucm60")
+region = Rect2(120, 0, 7, 7)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f431i"]
+atlas = ExtResource("1_ucm60")
+region = Rect2(8, 0, 7, 7)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dc8fe"]
+atlas = ExtResource("1_ucm60")
+region = Rect2(168, 0, 7, 7)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ue4uv"]
+atlas = ExtResource("1_ucm60")
+region = Rect2(32, 0, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y4dfh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7thye")
+}],
+"loop": true,
+"name": &"atlas",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f431i")
+}],
+"loop": true,
+"name": &"delilah",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dc8fe")
+}],
+"loop": true,
+"name": &"julian",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ue4uv")
+}],
+"loop": true,
+"name": &"mercer",
+"speed": 5.0
+}]
+
+[node name="Glyph" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_y4dfh")
+animation = &"mercer"
