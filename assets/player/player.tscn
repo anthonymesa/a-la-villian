@@ -151,6 +151,8 @@ data = Array[ExtResource("4_p3qjk")]([SubResource("Resource_ynhyd")])
 script = ExtResource("1_dgp83")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 1
 sprite_frames = SubResource("SpriteFrames_xiatg")
 animation = &"walk_down"
 

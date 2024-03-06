@@ -1,28 +1,29 @@
-[gd_scene load_steps=7 format=3 uid="uid://b3x3054o13x0q"]
+[gd_scene load_steps=8 format=3 uid="uid://b3x3054o13x0q"]
 
-[ext_resource type="Texture2D" uid="uid://tvo04lmh0k2a" path="res://assets/glyph/glyphs-colouring-example.png" id="1_ucm60"]
+[ext_resource type="Script" path="res://assets/glyph/glyph.gd" id="1_13x3i"]
+[ext_resource type="Texture2D" uid="uid://caomdo6s625ew" path="res://assets/glyph/glyphs-colouring-example-alpha.png" id="2_3pwk8"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7thye"]
-atlas = ExtResource("1_ucm60")
-region = Rect2(120, 0, 7, 7)
+[sub_resource type="AtlasTexture" id="AtlasTexture_0uxyw"]
+atlas = ExtResource("2_3pwk8")
+region = Rect2(120, 0, 8, 8)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_f431i"]
-atlas = ExtResource("1_ucm60")
-region = Rect2(8, 0, 7, 7)
+[sub_resource type="AtlasTexture" id="AtlasTexture_nbntn"]
+atlas = ExtResource("2_3pwk8")
+region = Rect2(8, 0, 8, 8)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dc8fe"]
-atlas = ExtResource("1_ucm60")
-region = Rect2(168, 0, 7, 7)
+[sub_resource type="AtlasTexture" id="AtlasTexture_a5kec"]
+atlas = ExtResource("2_3pwk8")
+region = Rect2(168, 0, 8, 8)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ue4uv"]
-atlas = ExtResource("1_ucm60")
+[sub_resource type="AtlasTexture" id="AtlasTexture_na50m"]
+atlas = ExtResource("2_3pwk8")
 region = Rect2(32, 0, 8, 8)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_y4dfh"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7thye")
+"texture": SubResource("AtlasTexture_0uxyw")
 }],
 "loop": true,
 "name": &"atlas",
@@ -30,7 +31,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_f431i")
+"texture": SubResource("AtlasTexture_nbntn")
 }],
 "loop": true,
 "name": &"delilah",
@@ -38,7 +39,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dc8fe")
+"texture": SubResource("AtlasTexture_a5kec")
 }],
 "loop": true,
 "name": &"julian",
@@ -46,7 +47,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ue4uv")
+"texture": SubResource("AtlasTexture_na50m")
 }],
 "loop": true,
 "name": &"mercer",
@@ -54,7 +55,10 @@ animations = [{
 }]
 
 [node name="Glyph" type="Node2D"]
+script = ExtResource("1_13x3i")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 1
 sprite_frames = SubResource("SpriteFrames_y4dfh")
-animation = &"mercer"
+animation = &"atlas"

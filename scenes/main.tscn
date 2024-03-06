@@ -13,7 +13,10 @@
 position = Vector2(28, 38)
 
 [node name="Glyph" parent="." instance=ExtResource("2_j4ees")]
-position = Vector2(43, 40)
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(45, 57)
+type = 1
 
 [node name="Slime" parent="." instance=ExtResource("3_42mqk")]
 position = Vector2(59, 31)
@@ -49,5 +52,7 @@ offset_bottom = 225.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+editor_draw_screen = false
 
 [editable path="UI"]

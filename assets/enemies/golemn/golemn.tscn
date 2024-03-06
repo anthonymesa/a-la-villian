@@ -37,6 +37,8 @@ animations = [{
 [node name="Golemn" type="Node2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 1
 sprite_frames = SubResource("SpriteFrames_cfepb")
 animation = &"walk_down"
 frame_progress = 0.450601
